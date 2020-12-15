@@ -88,11 +88,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\business-casual.css" />
+    <Content Include="Content\css\business-casual.min.css" />
+    <Content Include="Content\img\about.jpg" />
+    <Content Include="Content\img\bg.jpg" />
+    <Content Include="Content\img\intro.jpg" />
+    <Content Include="Content\img\products-01.jpg" />
+    <Content Include="Content\img\products-02.jpg" />
+    <Content Include="Content\img\products-03.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\jquery\jquery.js" />
+    <Content Include="Content\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Kaynak\about.html" />
+    <Content Include="Kaynak\css\business-casual.css" />
+    <Content Include="Kaynak\css\business-casual.min.css" />
+    <Content Include="Kaynak\gulpfile.js" />
+    <Content Include="Kaynak\img\about.jpg" />
+    <Content Include="Kaynak\img\bg.jpg" />
+    <Content Include="Kaynak\img\intro.jpg" />
+    <Content Include="Kaynak\img\products-01.jpg" />
+    <Content Include="Kaynak\img\products-02.jpg" />
+    <Content Include="Kaynak\img\products-03.jpg" />
+    <Content Include="Kaynak\index.html" />
+    <Content Include="Kaynak\products.html" />
+    <Content Include="Kaynak\store.html" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Kaynak\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Kaynak\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Kaynak\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Kaynak\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Kaynak\vendor\jquery\jquery.js" />
+    <Content Include="Kaynak\vendor\jquery\jquery.min.js" />
+    <Content Include="Kaynak\vendor\jquery\jquery.slim.js" />
+    <Content Include="Kaynak\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -100,7 +151,57 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Kaynak\.browserslistrc" />
+    <Content Include="Kaynak\.gitignore" />
+    <Content Include="Kaynak\.travis.yml" />
+    <Content Include="Kaynak\LICENSE" />
+    <Content Include="Kaynak\package-lock.json" />
+    <Content Include="Kaynak\package.json" />
+    <Content Include="Kaynak\README.md" />
+    <Content Include="Kaynak\scss\business-casual.scss" />
+    <Content Include="Kaynak\scss\_about.scss" />
+    <Content Include="Kaynak\scss\_bootstrap-overrides.scss" />
+    <Content Include="Kaynak\scss\_buttons.scss" />
+    <Content Include="Kaynak\scss\_cta.scss" />
+    <Content Include="Kaynak\scss\_footer.scss" />
+    <Content Include="Kaynak\scss\_global.scss" />
+    <Content Include="Kaynak\scss\_intro.scss" />
+    <Content Include="Kaynak\scss\_mixins.scss" />
+    <Content Include="Kaynak\scss\_navbar.scss" />
+    <Content Include="Kaynak\scss\_products.scss" />
+    <Content Include="Kaynak\scss\_store.scss" />
+    <Content Include="Kaynak\scss\_variables.scss" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Kaynak\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Kaynak\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Kaynak\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Kaynak\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Kaynak\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Kaynak\vendor\jquery\jquery.min.map" />
+    <Content Include="Kaynak\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\vendor\jquery\jquery.min.map" />
+    <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\Hakkimizda.cshtml" />
+    <Content Include="Views\Default\Urunler.cshtml" />
+    <Content Include="Views\Default\Magaza.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,7 +211,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
