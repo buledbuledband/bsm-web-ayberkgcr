@@ -13,18 +13,18 @@ namespace WebApp.Controllers
         {
             return View();
         }
-
+        [Route("Hakkımızda")]
      
         public ActionResult Hakkimizda()
         {
             return View();
         }
-
+        [Route("Urunler")]
         public ActionResult Urunler()
         {
             return View();
         }
-
+        [Route("Magaza")]
         public ActionResult Magaza()
         {
             return View();

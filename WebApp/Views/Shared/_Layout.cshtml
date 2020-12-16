@@ -43,19 +43,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active px-lg-4">
+                    <li class="nav-item  px-lg-4 @(ViewBag.title=="Ana Sayfa"?"active":"")">
                         <a class="nav-link text-uppercase text-expanded" href="@Url.Action("Index","Default")">
                             Ana Sayfa
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item px-lg-4">
+                    <li class="nav-item px-lg-4  @(ViewBag.title=="Hakkımızda"?"active":"")">
                         <a class="nav-link text-uppercase text-expanded" href="@Url.Action("Hakkimizda","Default")">Hakkımızda</a>
                     </li>
-                    <li class="nav-item px-lg-4">
+                    <li class="nav-item px-lg-4  @(ViewBag.title=="Urunler"?"active":"")">
                         <a class="nav-link text-uppercase text-expanded" href="@Url.Action("Urunler","Default")">ürünler</a>
                     </li>
-                    <li class="nav-item px-lg-4">
+                    <li class="nav-item px-lg-4  @(ViewBag.title=="Magaza"?"active":"")">
                         <a class="nav-link text-uppercase text-expanded" href="@Url.Action("Magaza","Default")">Mağaza</a>
                     </li>
                 </ul>
