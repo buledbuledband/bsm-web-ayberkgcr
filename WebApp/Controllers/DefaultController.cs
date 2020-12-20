@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using WebApp.Models;
 namespace WebApp.Controllers
 {
     public class DefaultController : Controller
@@ -13,12 +13,28 @@ namespace WebApp.Controllers
         {
             return View();
         }
+        
+        
+        
+        
+        
+        
         [Route("Hakkımızda")]
      
         public ActionResult Hakkimizda()
         {
-            return View();
+            using (kahve2020Entities db = new kahve2020Entities())
+            {
+                var model = db.hakkimiza.Find(1);
+                return View(model);
+            }
+               
         }
+
+
+
+
+
         [Route("Urunler")]
         public ActionResult Urunler()
         {

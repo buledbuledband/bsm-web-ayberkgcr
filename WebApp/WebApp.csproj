@@ -43,7 +43,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -139,6 +145,16 @@
     <Content Include="Kaynak\vendor\jquery\jquery.min.js" />
     <Content Include="Kaynak\vendor\jquery\jquery.slim.js" />
     <Content Include="Kaynak\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Models\kahve2020.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>kahve2020.Context.cs</LastGenOutput>
+      <DependentUpon>kahve2020.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\kahve2020.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>kahve2020.edmx</DependentUpon>
+      <LastGenOutput>kahve2020.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +162,27 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\hakkimiza.cs">
+      <DependentUpon>kahve2020.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kahve2020.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kahve2020.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kahve2020.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kahve2020.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kahve2020.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kahve2020.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\urunler.cs">
+      <DependentUpon>kahve2020.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -195,6 +232,13 @@
     <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Content\vendor\jquery\jquery.min.map" />
     <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
+    <EntityDeploy Include="Models\kahve2020.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>kahve2020.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\kahve2020.edmx.diagram">
+      <DependentUpon>kahve2020.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -211,7 +255,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
