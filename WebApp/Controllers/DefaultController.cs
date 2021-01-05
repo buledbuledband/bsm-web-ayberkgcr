@@ -46,6 +46,19 @@ namespace WebApp.Controllers
             }
            
         }
+        [Route("urun/{id}")]
+        public ActionResult UrunDetay(int id)
+        {
+            using (kahve2020Entities db= new kahve2020Entities())
+            {
+                var model = db.urunler.Where(x => x.aktif == true && x.id == id).FirstOrDefault();
+                if (model==null)
+                {
+                    return HttpNotFound();
+                }
+                return View(model);
+            }
+        }
 
 
         [Route("Magaza")]

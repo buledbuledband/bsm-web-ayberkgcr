@@ -246,6 +246,7 @@
     <Content Include="Views\Default\Hakkimizda.cshtml" />
     <Content Include="Views\Default\Urunler.cshtml" />
     <Content Include="Views\Default\Magaza.cshtml" />
+    <Content Include="Views\Default\UrunDetay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
