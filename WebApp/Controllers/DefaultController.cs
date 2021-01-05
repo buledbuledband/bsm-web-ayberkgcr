@@ -38,8 +38,16 @@ namespace WebApp.Controllers
         [Route("Urunler")]
         public ActionResult Urunler()
         {
-            return View();
+
+            using (kahve2020Entities db= new kahve2020Entities())
+            {
+                var model = db.urunler.Where(x=>x.aktif==true).OrderBy(x=>x.sira).ToList();
+                     return View(model);
+            }
+           
         }
+
+
         [Route("Magaza")]
         public ActionResult Magaza()
         {
