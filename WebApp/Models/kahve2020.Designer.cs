@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\FO\source\repos\WebApp\WebApp\Models\kahve2020.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\user\Documents\GitHub\bsm-web-ayberkgcr\WebApp\Models\kahve2020.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

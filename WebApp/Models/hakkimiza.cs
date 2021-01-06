@@ -16,7 +16,7 @@ namespace WebApp.Models
     {
         public int id { get; set; }
         public string foto { get; set; }
-        public string baslik { get; set; }
+        public string baslig { get; set; }
         public string usttbaslik { get; set; }
         public string icerik { get; set; }
     }
