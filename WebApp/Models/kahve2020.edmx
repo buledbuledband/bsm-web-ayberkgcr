@@ -11,7 +11,6 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="foto" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="baslig" Type="char" MaxLength="250" Nullable="false" />
           <Property Name="usttbaslik" Type="char" MaxLength="250" Nullable="false" />
           <Property Name="icerik" Type="text" Nullable="false" />
         </EntityType>
@@ -21,7 +20,6 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="foto" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="baslig" Type="char" MaxLength="250" Nullable="false" />
           <Property Name="üsttbaslik" Type="char" MaxLength="250" Nullable="false" />
           <Property Name="icerik" Type="text" Nullable="false" />
           <Property Name="aktif" Type="bool" Nullable="false" />
@@ -43,7 +41,6 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="foto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="baslig" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="usttbaslik" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="icerik" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
@@ -53,14 +50,13 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="foto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="baslig" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="üsttbaslik" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="icerik" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="aktif" Type="Boolean" Nullable="false" />
           <Property Name="pasif" Type="Int32" />
           <Property Name="sira" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="kahve2020Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="kahve2020Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="hakkimiza" EntityType="Self.hakkimiza" />
           <EntitySet Name="urunler" EntityType="Self.urunler" />
         </EntityContainer>
@@ -69,13 +65,12 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="kahve2020ModelStoreContainer" CdmEntityContainer="kahve2020Entities">
+        <EntityContainerMapping StorageEntityContainer="kahve2020ModelStoreContainer" CdmEntityContainer="kahve2020Entities1">
           <EntitySetMapping Name="hakkimiza">
             <EntityTypeMapping TypeName="kahve2020Model.hakkimiza">
               <MappingFragment StoreEntitySet="hakkimiza">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="foto" ColumnName="foto" />
-                <ScalarProperty Name="baslig" ColumnName="baslig" />
                 <ScalarProperty Name="usttbaslik" ColumnName="usttbaslik" />
                 <ScalarProperty Name="icerik" ColumnName="icerik" />
               </MappingFragment>
@@ -86,7 +81,6 @@
               <MappingFragment StoreEntitySet="urunler">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="foto" ColumnName="foto" />
-                <ScalarProperty Name="baslig" ColumnName="baslig" />
                 <ScalarProperty Name="üsttbaslik" ColumnName="üsttbaslik" />
                 <ScalarProperty Name="icerik" ColumnName="icerik" />
                 <ScalarProperty Name="aktif" ColumnName="aktif" />

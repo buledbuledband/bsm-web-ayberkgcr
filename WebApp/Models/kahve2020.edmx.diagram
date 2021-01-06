@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e2233186a51d49d29392411a99f0738a" Name="Diagram1">
+      <Diagram DiagramId="7f35d1a4cb404213beb9fb60ad6592c9" Name="Diagram1">
         <EntityTypeShape EntityType="kahve2020Model.hakkimiza" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="kahve2020Model.urunler" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>

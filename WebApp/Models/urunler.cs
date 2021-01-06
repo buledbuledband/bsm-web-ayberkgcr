@@ -16,7 +16,6 @@ namespace WebApp.Models
     {
         public int id { get; set; }
         public string foto { get; set; }
-        public string baslig { get; set; }
         public string üsttbaslik { get; set; }
         public string icerik { get; set; }
         public bool aktif { get; set; }

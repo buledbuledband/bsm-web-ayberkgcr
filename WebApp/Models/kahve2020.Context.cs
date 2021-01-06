@@ -13,10 +13,10 @@ namespace WebApp.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class kahve2020Entities : DbContext
+    public partial class kahve2020Entities1 : DbContext
     {
-        public kahve2020Entities()
-            : base("name=kahve2020Entities")
+        public kahve2020Entities1()
+            : base("name=kahve2020Entities1")
         {
         }
     

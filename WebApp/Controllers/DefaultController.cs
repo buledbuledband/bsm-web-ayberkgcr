@@ -23,7 +23,7 @@ namespace WebApp.Controllers
      
         public ActionResult Hakkimizda()
         {
-            using (kahve2020Entities db = new kahve2020Entities())
+            using (kahve2020Entities1 db = new kahve2020Entities1())
             {
                 var model = db.hakkimiza.Find(1);
                 return View(model);
@@ -39,7 +39,7 @@ namespace WebApp.Controllers
         public ActionResult Urunler()
         {
 
-            using (kahve2020Entities db= new kahve2020Entities())
+            using (kahve2020Entities1 db= new kahve2020Entities1())
             {
                 var model = db.urunler.Where(x=>x.aktif==true).OrderBy(x=>x.sira).ToList();
                      return View(model);
@@ -49,7 +49,7 @@ namespace WebApp.Controllers
         [Route("urun/{id}")]
         public ActionResult UrunDetay(int id)
         {
-            using (kahve2020Entities db= new kahve2020Entities())
+            using (kahve2020Entities1 db= new kahve2020Entities1())
             {
                 var model = db.urunler.Where(x => x.aktif == true && x.id == id).FirstOrDefault();
                 if (model==null)
