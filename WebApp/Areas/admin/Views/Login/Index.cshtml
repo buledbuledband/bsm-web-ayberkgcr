@@ -1,4 +1,4 @@
-﻿
+﻿@model WebApp.Models.kullanicilar
 @{
     Layout = null;
 }
@@ -33,9 +33,12 @@
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
 
-                <form action="../../index3.html" method="post">
+                @using (Html.BeginForm("Alogin","login",new {FormMethod.Post }))
+                {
+
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                        
+                        @Html.TextBoxFor(m =>m.kad, new { @class = "form-control", placeholder = "Kullanıcı Adı", autofocus = "autofocus" })
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -43,7 +46,8 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        
+                        @Html.PasswordFor(m => m.sifre, new { @class = "form-control", placeholder = "Parola" })
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -61,11 +65,18 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block">Giriş</button>
                         </div>
                         <!-- /.col -->
                     </div>
-                </form>
+                }
+
+                @if (ViewBag.Hata!=null)
+                {
+                    <div class="alert alert-danger mt-4">
+                        @ViewBag.Hata
+                    </div>
+                }
 
                 <div class="social-auth-links text-center mb-3">
                     <p>- OR -</p>
