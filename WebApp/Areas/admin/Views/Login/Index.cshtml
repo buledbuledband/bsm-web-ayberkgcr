@@ -22,6 +22,11 @@
     <link rel="stylesheet" href="~/Content/admin/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<style>
+    .field-validation-error{
+        color:red;
+    }
+</style>
 </head>
 <body class="hold-transition login-page">
     <div class="login-box">
@@ -33,20 +38,23 @@
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
 
-                @using (Html.BeginForm("Alogin","login",new {FormMethod.Post }))
+                @using (Html.BeginForm("Alogin", "login", new { FormMethod.Post }))
                 {
-
+                    @Html.AntiForgeryToken()
                     <div class="input-group mb-3">
-                        
-                        @Html.TextBoxFor(m =>m.kad, new { @class = "form-control", placeholder = "Kullanıcı Adı", autofocus = "autofocus" })
+
+                        @Html.TextBoxFor(m => m.kad, new { @class = "form-control", placeholder = "Kullanıcı Adı", autofocus = "autofocus" })
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
                     </div>
+                    @Html.ValidationMessageFor(m => m.kad)
+
+
                     <div class="input-group mb-3">
-                        
+
                         @Html.PasswordFor(m => m.sifre, new { @class = "form-control", placeholder = "Parola" })
                         <div class="input-group-append">
                             <div class="input-group-text">
@@ -54,12 +62,16 @@
                             </div>
                         </div>
                     </div>
+                    @Html.ValidationMessageFor(m => m.sifre)
+
                     <div class="row">
                         <div class="col-8">
                             <div class="icheck-primary">
                                 <input type="checkbox" id="remember">
-                                <label for="remember">
-                                    Remember Me
+
+                                <label>
+                                    @Html.CheckBoxFor(m=>m.BeniHatirla)
+                                    Beni Hatırla
                                 </label>
                             </div>
                         </div>
@@ -71,7 +83,7 @@
                     </div>
                 }
 
-                @if (ViewBag.Hata!=null)
+                @if (ViewBag.Hata != null)
                 {
                     <div class="alert alert-danger mt-4">
                         @ViewBag.Hata

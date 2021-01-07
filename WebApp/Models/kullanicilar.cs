@@ -11,12 +11,21 @@ namespace WebApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class kullanicilar
     {
         public int id { get; set; }
+
+
+        [Required(ErrorMessage ="Lütfen kullanýcý adýnýzý giriniz!")]
         public string kad { get; set; }
+
+
+        [Required(ErrorMessage = "Lütfen parolanýzý giriniz!")]
         public string sifre { get; set; }
         public Nullable<sbyte> role { get; set; }
+
+        public virtual bool BeniHatirla { get; set; }
     }
 }

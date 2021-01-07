@@ -152,6 +152,8 @@
     <Content Include="Content\admin\plugins\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Content\admin\plugins\bootstrap\js\bootstrap.js" />
     <Content Include="Content\admin\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\admin\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Content\admin\plugins\datatables\jquery.dataTables.min.js" />
     <Content Include="Content\admin\plugins\fontawesome-free\css\all.css" />
     <Content Include="Content\admin\plugins\fontawesome-free\css\all.min.css" />
     <Content Include="Content\admin\plugins\fontawesome-free\css\brands.css" />
@@ -243,6 +245,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\admin\Controllers\Sifrele.cs" />
     <Compile Include="Areas\admin\Controllers\UrunlerController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
@@ -362,9 +365,9 @@
     <Content Include="Models\kahve2020Model.edmx.diagram">
       <DependentUpon>kahve2020Model.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\admin\Views\Urunler\Index.cshtml" />
     <None Include="packages.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\Hakkimizda.cshtml" />
     <Content Include="Views\Default\Urunler.cshtml" />
@@ -380,8 +383,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Data\" />
-    <Folder Include="Areas\admin\Views\Shared\" />
-    <Folder Include="Areas\admin\Views\Urunler\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

@@ -12,7 +12,7 @@ namespace WebApp.Areas.admin.Controllers
         // GET: admin/Urunler
         public ActionResult Index()
         {
-            return Content("Ürünler sayfası");
+            return View();
         }
     }
 }
