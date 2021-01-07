@@ -38,7 +38,7 @@
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
 
-                @using (Html.BeginForm("Alogin", "login", new { FormMethod.Post }))
+                @using (Html.BeginForm("Alogin", "login", new {ReturnUrl=Request.QueryString["ReturnUrl"], FormMethod.Post }))//retun url adres satırına dahil edildi
                 {
                     @Html.AntiForgeryToken()
                     <div class="input-group mb-3">

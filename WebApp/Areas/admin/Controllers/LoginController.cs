@@ -23,7 +23,7 @@ namespace WebApp.Areas.admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public ActionResult Alogin(kullanicilar kullaniciformu)
+        public ActionResult Alogin(kullanicilar kullaniciformu, string ReturnUrl)
         {
 
             if (!ModelState.IsValid)
@@ -40,6 +40,14 @@ namespace WebApp.Areas.admin.Controllers
                 if (kullaniciVarmi !=null)
                 {
                     FormsAuthentication.SetAuthCookie(kullaniciVarmi.kad, kullaniciformu.BeniHatirla);
+                    if (string.IsNullOrEmpty(ReturnUrl)) //return url işlemleri
+                    {
+                        return Redirect(ReturnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("/index", "urunler");
+                    }
                     return RedirectToAction("/index", "urunler");
                 }
 
@@ -49,5 +57,12 @@ namespace WebApp.Areas.admin.Controllers
 
             
         }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut(); //oturumdan çıkartır
+            return RedirectToAction("index");
+        }
+
     }
 }
