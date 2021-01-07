@@ -152,6 +152,16 @@
     <Content Include="Content\admin\plugins\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Content\admin\plugins\bootstrap\js\bootstrap.js" />
     <Content Include="Content\admin\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\admin\plugins\datatables-bs4\css\dataTables.bootstrap4.css" />
+    <Content Include="Content\admin\plugins\datatables-bs4\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\admin\plugins\datatables-bs4\js\dataTables.bootstrap4.js" />
+    <Content Include="Content\admin\plugins\datatables-bs4\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Content\admin\plugins\datatables-responsive\css\responsive.bootstrap4.css" />
+    <Content Include="Content\admin\plugins\datatables-responsive\css\responsive.bootstrap4.min.css" />
+    <Content Include="Content\admin\plugins\datatables-responsive\js\dataTables.responsive.js" />
+    <Content Include="Content\admin\plugins\datatables-responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Content\admin\plugins\datatables-responsive\js\responsive.bootstrap4.js" />
+    <Content Include="Content\admin\plugins\datatables-responsive\js\responsive.bootstrap4.min.js" />
     <Content Include="Content\admin\plugins\datatables\jquery.dataTables.js" />
     <Content Include="Content\admin\plugins\datatables\jquery.dataTables.min.js" />
     <Content Include="Content\admin\plugins\fontawesome-free\css\all.css" />
@@ -244,6 +254,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
+    <Compile Include="Areas\admin\Controllers\HakkimizdaController.cs" />
     <Compile Include="Areas\admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\admin\Controllers\Sifrele.cs" />
     <Compile Include="Areas\admin\Controllers\UrunlerController.cs" />
@@ -367,6 +378,7 @@
     </Content>
     <Content Include="Areas\admin\Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Areas\admin\Views\Urunler\Index.cshtml" />
+    <Content Include="Areas\admin\Views\Hakkimizda\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\Hakkimizda.cshtml" />
