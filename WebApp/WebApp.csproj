@@ -239,16 +239,6 @@
     <Content Include="Kaynak\vendor\jquery\jquery.min.js" />
     <Content Include="Kaynak\vendor\jquery\jquery.slim.js" />
     <Content Include="Kaynak\vendor\jquery\jquery.slim.min.js" />
-    <Content Include="Models\kahve2020Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>kahve2020Model.edmx</DependentUpon>
-      <LastGenOutput>kahve2020Model.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\kahve2020Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>kahve2020Model.edmx</DependentUpon>
-      <LastGenOutput>kahve2020Model.cs</LastGenOutput>
-    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -261,30 +251,6 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\hakkimiza.cs">
-      <DependentUpon>kahve2020Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\kahve2020Model.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kahve2020Model.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\kahve2020Model.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kahve2020Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\kahve2020Model.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kahve2020Model.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\kullanicilar.cs">
-      <DependentUpon>kahve2020Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\urunler.cs">
-      <DependentUpon>kahve2020Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -369,13 +335,6 @@
     <Content Include="Content\admin\plugins\icheck-bootstrap\LICENSE" />
     <Content Include="Content\admin\plugins\jquery\jquery.min.map" />
     <Content Include="Content\admin\plugins\jquery\jquery.slim.min.map" />
-    <EntityDeploy Include="Models\kahve2020Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>kahve2020Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\kahve2020Model.edmx.diagram">
-      <DependentUpon>kahve2020Model.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\admin\Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Areas\admin\Views\Urunler\Index.cshtml" />
     <Content Include="Areas\admin\Views\Hakkimizda\Index.cshtml" />
@@ -395,6 +354,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
